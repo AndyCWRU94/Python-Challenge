@@ -29,20 +29,20 @@ with open(csvpath) as budgetfile:
     #The total net amount of "Profit/Losses" over the entire period
     print("Total net profit: ")
     totalamt = (sum(map(int, profit)))
-    print(totalamt)
+    print("$" + str(totalamt))
     # The average change in "Profit/Losses" between months over the entire period
     print("Average change in profit between months:")
     numofrows = len(profit)
     average = totalamt/numofrows
-    print(average)
+    print("$"+str(round(average)))
     #The greatest increase in profits (date and amount) over the entire period
     print("Greatest increase in profits")
     differences = []
     for i in profit:
         new = i + (i - 1)
         differences.append(new)
-    print(int(max(differences)))
+    print("$"+str(max(differences)))
     #The greatest decrease in losses (date and amount) over the entire period
     print("Greatest decrease in profits:")
-    print(int(min(differences)))
+    print("$"+str(min(differences)))
 
