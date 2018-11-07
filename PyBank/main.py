@@ -41,8 +41,8 @@ with open(csvpath) as budgetfile:
     for i in profit:
         new = i + (i - 1)
         differences.append(new)
-    print("$"+str(max(differences)))
+    print(int(max(differences)))
     #The greatest decrease in losses (date and amount) over the entire period
     print("Greatest decrease in profits:")
-    print("$"+str(min(differences)))
+    print(int(min(differences)))
 
